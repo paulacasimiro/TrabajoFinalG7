@@ -26,9 +26,9 @@ public class TrabajoFinalG7Application implements CommandLineRunner {
 		/*
 		usuario.setEstado(true);
 		usuario.setCodigo(2);
-		usuario.setNombredeusuario("admin");
+		usuario.setNombredeusuario("ingrid");
 		usuario.setPassword("222");
-		usuario.setTipo("ADMIN");
+		usuario.setTipo("USUARIO");
 		ps.registrarPaciente(usuario);
 		*/
 	}

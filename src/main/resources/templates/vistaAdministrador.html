@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Vista de Administrador</title>
-  <!-- <link rel="stylesheet" href="./footandheadstyle.css">
- <link rel="stylesheet" th:href="@{./style.css}"> -->
+  <!-- <link rel="stylesheet" href="./footandheadstyle.css">-->
+ <link rel="stylesheet" th:href="@{./style.css}"> 
+ <link rel="stylesheet" th:href="@{./estilo.css}"> 
+ 
 
   <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
   <style>
@@ -32,7 +34,7 @@
 
     body {
     	color: white;
-    	background: black;
+    	background: white;
     	font-family: 'georgia';
     }
     
@@ -80,13 +82,51 @@
   <div class="btn-container">
 
   
-    <a class="btn btn-outline-light" th:href="@{/especialidad}">Especialidad</a>
+    <!--  <a class="btn btn-outline-light" th:href="@{/especialidad}">Especialidad</a>
     <a class="btn btn-outline-light" th:href="@{/medico}">Medico</a>
     <a class="btn btn-outline-light" th:href="@{/paciente}">Paciente</a>
     <a class="btn btn-outline-light" th:href="@{/servicio}">Servicio</a>
-    <a class="btn btn-outline-light" th:href="@{/pacienteServicio}">Reserva</a>
-  
-      <a class="btn btn-outline-light" th:href="@{/}">Pag Principal</a>
+    <a class="btn btn-outline-light" th:href="@{/pacienteServicio}">Reserva</a>-->
+    
+    <nav>
+		<ul class="menu-horizontal">
+			<li>
+				<a href="#">Especialidad</a>
+				<ul class="menu-vertical">
+					<li><a href="/especialidad">Añadir</a></li>
+					<li><a href="/listado">Listado</a></li>
+				</ul>
+			<li>
+				<a href="#">Medico</a>
+				<ul class="menu-vertical">
+					<li><a href="/medico">Añadir</a></li>
+					<li><a href="/listadoMedico">Listado</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Paciente</a>
+				<ul class="menu-vertical">
+					<li><a href="/paciente">Añadir</a></li>
+					<li><a href="/listadoPaciente">Listado</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Servicio</a>
+				<ul class="menu-vertical">
+					<li><a href="/servicio">Añadir</a></li>
+					<li><a href="/listadoServicio">Listado</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Reserva</a>
+				<ul class="menu-vertical">
+					<li><a href="/pacienteServicio">Añadir</a></li>
+					<li><a href="/listadoReserva">Listado</a></li>
+				</ul>
+			</li>
+
+		</ul>
+	</nav>
   
   </div>
   </div>

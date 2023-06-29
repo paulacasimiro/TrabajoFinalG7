@@ -72,5 +72,11 @@ public class ServicioController {
 		return listarServicio;
 		
 	}
-	
+	@GetMapping ("/listadoServicio")
+	public ModelAndView mostrarPaciente() {
+		ModelAndView form= new ModelAndView ("listadoServicio"); 
+		form.addObject("listadoServicio", servicioService.listarTodosServicios());
+		return form; 
+		
+	}	
 }
