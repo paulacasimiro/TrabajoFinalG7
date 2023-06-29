@@ -23,12 +23,13 @@ public class TrabajoFinalG7Application implements CommandLineRunner {
 	@Override 
 	public void run (String... args ) throws Exception{
 		
-		
+		/*
 		usuario.setEstado(true);
-		usuario.setCodigo(4);
-		usuario.setNombredeusuario("admin");
+		usuario.setCodigo(2);
+		usuario.setNombredeusuario("ingrid");
 		usuario.setPassword("222");
 		usuario.setTipo("USUARIO");
 		ps.registrarPaciente(usuario);
+    */
 	}
 }

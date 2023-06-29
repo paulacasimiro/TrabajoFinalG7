@@ -44,26 +44,6 @@ public class PacienteController {
 		
 		return lista;
 	}
-	
-	/*@PostMapping("/guardarPaciente")
-	public ModelAndView guardarPaciente(@Valid @ModelAttribute("paciente") Paciente pacienteConDatos, BindingResult result) {
-		if(result.hasErrors()) {
-			G7.error(result.getAllErrors());
-			ModelAndView cargarPaciente= new ModelAndView ("formularioPaciente"); 
-			cargarPaciente.addObject("paciente", pacienteConDatos); 
-			cargarPaciente.addObject("band", false);
-			return cargarPaciente;
-		}
-		ModelAndView listarPaciente = new ModelAndView("MostrarPacientes");
-		G7.warn("mostrando paciente"+pacienteConDatos.getNombredeusuario());
-		try {
-			pacienteService.registrarPaciente(pacienteConDatos);
-		}catch(Exception e) {}
-		listarPaciente.addObject("MostrarPacientes",pacienteService.listarTodoslosPacientes());
-		
-		return listarPaciente;
-		
-	}*/
 	   
     @GetMapping("/editarPaciente/{codigo}")
  	public ModelAndView editarPaciente(@PathVariable(name="codigo") Integer codigo) {

@@ -60,6 +60,11 @@ public class Paciente_Servicio_Controller {
 		return lista;
 	} 
 	
-
+	@GetMapping ("/listadoReserva")
+	public ModelAndView mostrarPaciente() {
+		ModelAndView form= new ModelAndView ("listadeturnos"); 
+		form.addObject("listadeturnos", pss.listarTodoslosPaciente_Servicios());
+		return form; 
+	}
 	
 }
