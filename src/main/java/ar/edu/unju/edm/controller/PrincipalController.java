@@ -50,11 +50,19 @@ public class PrincipalController {
 	}
  //se muestra solo los datos de los usuarios registrados --vistadeRegistroUsuario.html--
 	 
- @PostMapping("/guardarPaciente2")
+ /*@PostMapping("/guardarPaciente2")
 	public ModelAndView guardarPaciente2(@ModelAttribute("paciente") Paciente pacienteConDatos) {
 		ModelAndView lista= new ModelAndView ("vistadeUsuario"); 
 		pacienteService.registrarPaciente(pacienteConDatos);
 		lista.addObject("listadoPaciente2", pacienteService.listarTodoslosPacientes()); 
+		
+		return lista;
+	} */
+ @PostMapping("/guardarPaciente2")
+	public ModelAndView guardarPaciente2(@ModelAttribute("paciente") Paciente pacienteConDatos) {
+	 ModelAndView lista= new ModelAndView ("index"); 	
+	 pacienteService.registrarPaciente(pacienteConDatos);
+		
 		
 		return lista;
 	} 

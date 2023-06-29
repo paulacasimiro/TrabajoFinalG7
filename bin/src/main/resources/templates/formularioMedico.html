@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>REGISTRAR MEDICO</title>
-
-<link rel="stylesheet" th:href="@{./stylePagPrincipal.css}">
+<link rel="stylesheet" href="./footandheadstyle.css">
+<link rel="stylesheet" th:href="@{./style.css}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 
 <style>
 body{
-	background: white; 
+	background: black;
 }
 </style>
 </head>
@@ -23,7 +23,7 @@ body{
 		<div class="col-3">
 		</div>
 		<div class="col">
-		<form class="form" th:object="${medico}" 
+		<form calss="form" th:object="${medico}" 
 		th:action="${band}?@{/modificarMedico}:@{/guardarMedico}" 
 		method="post">
 		
@@ -68,7 +68,7 @@ body{
 						
 				
 		 		<input class="btn btn-info" type="submit" href="/guardarMedico"value="REGISTRAR MEDICO">
-				 <a class="btn btn-info" th:href="@{/vistaAdministrador}">Pagina de Administrador</a>
+				 <a class="btn btn-outline-light" th:href="@{/vistaAdministrador}">Pagina de Aministrador</a>
 				
 			</div>
 	</form>

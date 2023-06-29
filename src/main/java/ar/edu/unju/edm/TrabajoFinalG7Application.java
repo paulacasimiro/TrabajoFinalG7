@@ -30,6 +30,6 @@ public class TrabajoFinalG7Application implements CommandLineRunner {
 		usuario.setPassword("222");
 		usuario.setTipo("USUARIO");
 		ps.registrarPaciente(usuario);
-		*/
+    */
 	}
 }

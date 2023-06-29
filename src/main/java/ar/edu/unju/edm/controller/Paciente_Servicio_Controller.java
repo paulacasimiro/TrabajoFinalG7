@@ -5,11 +5,11 @@ import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import ar.edu.unju.edm.model.Paciente;
 import ar.edu.unju.edm.model.Paciente_Servicio;
 import ar.edu.unju.edm.service.PacienteService;
 import ar.edu.unju.edm.service.PacienteServicio_Service;
@@ -29,12 +29,24 @@ public class Paciente_Servicio_Controller {
 	 
 	@Autowired 
 	Paciente_Servicio paci_serv; 
-	 
-	 @GetMapping("/pacienteServicio")
+	@Autowired
+	Paciente unPaciente; 
+	
+	/*  @GetMapping("/reserva")
+	 	public ModelAndView reservarServicio(@PathVariable(name="codigo") Integer codigo) {
+	 		ModelAndView modelAndView = new ModelAndView("formularioPacienteServicio");
+	 		modelAndView.addObject("reserva", paci_serv); 
+	 		modelAndView.addObject("pacientes", pacienteService.listarUnPaciente(codigo)); 
+	 		modelAndView.addObject("servicios", serv_Service.listarTodosServicios()); 
+	 		return modelAndView;
+	 	}
+	      
+	*/
+	@GetMapping("/pacienteServicio")
 	public ModelAndView registrarPacienteServicio(){
 		ModelAndView modelAndView = new ModelAndView("formularioPacienteServicio");
 		modelAndView.addObject("reserva",paci_serv);
-		modelAndView.addObject("pacientes",pacienteService.listarTodoslosPacientes() );
+		modelAndView.addObject("pacientes",pacienteService.listarTodoslosPacientes());
 		modelAndView.addObject("servicios",serv_Service.listarTodosServicios() );	
 		return modelAndView;
 	}
