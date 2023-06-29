@@ -30,7 +30,7 @@ public class ConfiguracionWeb extends WebSecurityConfigurerAdapter {
 		         //metodos definidos para cualquier usuario comun
 		         .antMatchers("/","/index","/paciente2","/guardarPaciente2").permitAll()
 		         //metodos definidos para el Admin---poner los otros metodos 
-		         .antMatchers("/medico","/listadoPaciente","/listado","/listadoMedico","/especialidad").hasAuthority("ADMIN")
+		         .antMatchers("/medico", "listadoMedico", "paciente", "/listadoPaciente","/listado","/especialidad", "/servicio", "/listadoServicio", "/pacienteServicio", "/listadoReserva").hasAuthority("ADMIN")
 		         .anyRequest().authenticated()
 		         .and()
 		         

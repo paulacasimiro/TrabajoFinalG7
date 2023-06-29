@@ -14,13 +14,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unju.edm.model.Especialidad;
-import ar.edu.unju.edm.model.Medico;
+import ar.edu.unju.edm.model.Especialidad; 
 import ar.edu.unju.edm.service.EspecialidadService;
 
 @Controller
 public class EspecialidadController {
-	private static final Log G7=  LogFactory.getLog(MedicoController.class);
+private static final Log G7=  LogFactory.getLog(MedicoController.class);
 	
 	@Autowired 
 	EspecialidadService especialidadSer; 
@@ -35,18 +34,18 @@ public class EspecialidadController {
 		return form; 
 		
 	}
-	/*@PostMapping ("/guardarEspecialidad")
+	@PostMapping ("/guardarEspecialidad")
 	public ModelAndView guardarEspecialidad (@ModelAttribute ("especialidad") Especialidad especialidadConDatos) {
 		ModelAndView listado=new ModelAndView ("listado"); 
 		especialidadSer.cargarEspecialidad(especialidadConDatos); 
 		listado.addObject("listado", especialidadSer.listarTodasEspecialidades()); 
 		return listado; 
-	}*/
+	}
 	
-	@PostMapping("/guardarEspecialidad")
+	/*@PostMapping("/guardarEspecialidad")
 	public ModelAndView guardarEspecialidad(@Valid @ModelAttribute("especialidad") Especialidad especialidadConDatos, BindingResult result) {
 		if(result.hasErrors()) {
-			G7.error(result.getAllErrors());
+		G7.error(result.getAllErrors());
 			ModelAndView cargarEspecialidad= new ModelAndView ("formulario"); 
 			cargarEspecialidad.addObject("especialidad", especialidadConDatos); 
 			cargarEspecialidad.addObject("band", false);
@@ -60,7 +59,7 @@ public class EspecialidadController {
 		listarEspecialidad.addObject("listado", especialidadSer.listarTodasEspecialidades());
 		
 		return listarEspecialidad;
-	}
+	}*/
 	
 	@GetMapping ("/editarEspecialidad/{codigo}")
 	public ModelAndView editarEspecialidad (@PathVariable (name = "codigo") Integer codigo) {

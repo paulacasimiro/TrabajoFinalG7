@@ -5,15 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
  
 <title>REGISTRAR TURNOS</title>
-<link rel="stylesheet" href="./stylePagPrincipal.css">
-
+<link rel="stylesheet" href="./footandheadstyle.css">
+<link rel="stylesheet" th:href="@{./style.css}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 
 <style>
 body{
-background:white; 
-
+	background: black;
 }
 </style>
 </head>
@@ -32,8 +31,7 @@ background:white;
 				<div class="container"> 
 				
 					<label  class="form-label">Usuario:</label><br>
-					<!-- <input class="form-control" th:field= "*{paciente.codigo}" th:value="${pacientes.codigo}" th:text="${pacientes.nombredeusuario}"></input><br> -->
-                   	 <select class="form-control" th:field="*{paciente.codigo}">
+                   	<select class="form-control" th:field="*{paciente.codigo}">
                     	<option th:each="paci:${pacientes}" th:value="${paci.codigo}" th:text="${paci.nombredeusuario}"></option>
                     </select><br>
       
@@ -49,13 +47,13 @@ background:white;
 					<input class="form-control" type="date" th:field="*{fechadefinalizacion}"></input><br> 
            									
            			<input class="btn btn-info" type="submit" href="/guardarPacienteServicio"value="REGISTRAR TURNO">
-					<a class="btn btn-info" th:href="@{/vistaAdministrador}">Pagina de Administrador</a>
-					
+					<a class="btn btn-outline-light" th:href="@{/vistaAdministrador}">Pagina de Aministrador</a>
+		 
 				</div>	
 						
 			</form>
       	</div>
-     	<div class="col-3">
+	<div class="col-3">
 	</div>
 	
 	</div>
