@@ -3,29 +3,29 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>FORMULARIO</title>
-<link rel="stylesheet" th:href="@{./footandheadstyle.css}">
-<link rel="stylesheet" th:href="@{./style.css}">
+<link rel="stylesheet" th:href="@{./stylePagPrincipal.css}">
+
 <link th:rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <style>
 body{
-background-color: black; 
+background-color: white; 
 }
 
 </style>
 </head>
 <body>
+
+
 	<div th:replace= "~{footandhead :: header}"></div>
-	
     <div class="container">
 		<div class="row">
 
 			<div class="col-3">
 			</div>
 			<div class="col-6">
-				<form class="form" th:object="${especialidad}" 
-				th:action="${band}?@{/modificarEspecialidad}:@{/guardarEspecialidad}" method="post">
-				
+				<form th:object="${especialidad}" th:action="${band}?@{/modificarEspecialidad}:@{/guardarEspecialidad}" method="post">
+				 
 				<input type="hidden" class="form-control" th:if="${band}" th:field="*{codigo}">
 					<h4>Especialidades</h4>
 					<div class="form-container">
@@ -41,7 +41,7 @@ background-color: black;
 						<input class="form-control" type="text" placeholder="Ingrese una descripcion" th:field="*{descripcion}"></input><br>
 						<input class="btn btn-info" type="submit" value="REGISTRAR">
 						
- <a class="btn btn-outline-light" th:href="@{/vistaAdministrador}">Pagina de Aministrador</a>
+ <a class="btn btn-info" th:href="@{/vistaAdministrador}">Pagina de Administrador</a>
  
 					</div>
 				</form>
@@ -50,7 +50,6 @@ background-color: black;
 			</div>
 		</div>
 		<div th:replace="~{footandhead :: footer}"></div>
-	</div>
 	
 	
 
