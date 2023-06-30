@@ -41,7 +41,7 @@ public class Autenticacion implements AuthenticationSuccessHandler  {
 		}
 		
 		if(tipoPaciente) {
-			redirectStrategy.sendRedirect(request, response,"/pacienteServicio");
+			redirectStrategy.sendRedirect(request, response,"/paciente2");
 		}else {
 			if(tipoAdmin) {
 				redirectStrategy.sendRedirect(request, response,"/vistaAdministrador");//especialidad
